@@ -145,7 +145,6 @@ main h1 {
   outline: 1px solid var(--border);
   margin: 0 auto 1.5rem;
 }
-
 .card {
   background-color: var(--paper);
   border: 1px solid var(--border);
