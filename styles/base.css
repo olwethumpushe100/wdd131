@@ -136,14 +136,15 @@ main h1 {
 
 .profile-photo {
   grid-column: 1 / -1;
-  width: 140px;
-  height: 140px;
+  width: 480px;
+  height: 518px;
+  max-width: 100%;
   object-fit: cover;
   object-position: top center;
-  border-radius: 50%;
+  border-radius: 8px;
   border: 3px solid var(--paper);
   outline: 1px solid var(--border);
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
 }
 
 .card {
@@ -212,3 +213,4 @@ footer p {
     transition: none;
   }
 }
+
