@@ -147,6 +147,13 @@ main h1 {
   margin: 0 auto 1.5rem;
 }
 
+.card {
+  background-color: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
 .card img {
   border-radius: 4px;
   margin-bottom: 1rem;

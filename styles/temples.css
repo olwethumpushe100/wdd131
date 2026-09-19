@@ -50,6 +50,7 @@ a {
    ============================================ */
 header {
   background-color: var(--header-bg);
+  padding: 0;
 }
 
 .header-bar {
@@ -59,11 +60,9 @@ header {
   padding: 1rem 1.25rem;
 }
 
-.site-title {
-  color: var(--bg);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.15rem, 1rem + 1vw, 1.5rem);
+#course-title {
+  /* base.css handles color/font/size; add spacing that fits this page's flex header */
+  margin-bottom: 0;
 }
 
 .hamburger {
@@ -127,6 +126,7 @@ nav a:focus-visible::after {
    Main / gallery (mobile: single column)
    ============================================ */
 main {
+  display: block;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.25rem 1.25rem 3rem;
@@ -138,6 +138,26 @@ main h1 {
   font-size: clamp(1.6rem, 1.3rem + 1.5vw, 2.25rem);
   text-align: center;
   margin: 0 0 1.75rem;
+}
+
+.intro-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro-cards .card h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.intro-cards .card p {
+  margin: 0;
+  color: var(--ink-soft);
 }
 
 .gallery {
