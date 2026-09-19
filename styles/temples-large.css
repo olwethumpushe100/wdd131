@@ -1,7 +1,10 @@
 /* ============================================
    Temple Album – larger-view overrides
    Loaded after temples.css; only takes effect
-   at wider viewports (mobile-first approach)
+   at wider viewports (mobile-first approach).
+   Selectors are scoped/specific enough to win
+   over temples.css's mobile rules without
+   needing !important.
    ============================================ */
 @media (min-width: 700px) {
 
@@ -14,8 +17,8 @@
     display: none;
   }
 
-  nav ul {
-    display: flex !important;
+  body.temples nav ul {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -34,7 +37,7 @@
 }
 
 @media (min-width: 1000px) {
-  main h1 {
+  body.temples main h1 {
     margin-bottom: 2.25rem;
   }
 }
