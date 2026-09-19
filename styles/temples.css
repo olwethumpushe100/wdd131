@@ -1,6 +1,5 @@
 /* ============================================
-   WDD 131 – Dynamic Web Fundamentals
-   Design tokens
+   Temple Album – mobile-first base styles
    ============================================ */
 :root {
   --bg: #F3F4EF;
@@ -12,88 +11,100 @@
   --header-bg: #1F3D30;
   --gold: #B98A19;
   --border: #DADFD5;
-
+ 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
-
-  --max-width: 900px;
+ 
+  --max-width: 1000px;
 }
-
-/* ============================================
-   Reset & base
-   ============================================ */
+ 
 * {
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
+ 
 body {
   margin: 0;
   background-color: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
+ 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
-
+ 
 a {
   color: var(--accent);
 }
-
+ 
 :focus-visible {
   outline: 2px solid var(--accent-dark);
   outline-offset: 3px;
 }
-
+ 
 /* ============================================
-   Header
+   Header / hamburger nav (mobile)
    ============================================ */
 header {
   background-color: var(--header-bg);
-  padding: 1.75rem 1.5rem 1.25rem;
 }
-
-#course-title {
-  display: block;
-  text-align: center;
+ 
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+ 
+.site-title {
   color: var(--bg);
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
-  letter-spacing: 0.01em;
-  margin-bottom: 1.25rem;
+  font-size: clamp(1.15rem, 1rem + 1vw, 1.5rem);
 }
-
+ 
+.hamburger {
+  background: transparent;
+  border: 2px solid var(--bg);
+  color: var(--bg);
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0.4rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+.hamburger:hover,
+.hamburger:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+ 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
   margin: 0;
-  padding: 0;
+  padding: 0 1.25rem 1.1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.85rem;
+  background-color: var(--header-bg);
 }
-
+ 
+nav ul.nav-open {
+  display: flex;
+}
+ 
 nav a {
   position: relative;
   display: inline-block;
   color: var(--bg);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
   padding: 0.25rem 0.05rem;
 }
-
+ 
 nav a::after {
   content: "";
   position: absolute;
@@ -106,66 +117,57 @@ nav a::after {
   transform-origin: left;
   transition: transform 0.2s ease;
 }
-
+ 
 nav a:hover::after,
 nav a:focus-visible::after {
   transform: scaleX(1);
 }
-
+ 
 /* ============================================
-   Main content
+   Main / gallery (mobile: single column)
    ============================================ */
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.25rem;
+  padding: 2.25rem 1.25rem 3rem;
 }
-
+ 
 main h1 {
-  grid-column: 1 / -1;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  font-size: clamp(1.6rem, 1.3rem + 1.5vw, 2.25rem);
+  text-align: center;
   margin: 0 0 1.75rem;
-  color: var(--ink);
+}
+ 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+ 
+figure {
+  margin: 0;
+  background-color: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
   text-align: center;
 }
-
-.profile-photo {
-  grid-column: 1 / -1;
-  width: 480px;
-  height: 518px;
-  max-width: 100%;
+ 
+figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: top center;
-  border-radius: 8px;
-  border: 3px solid var(--paper);
-  outline: 1px solid var(--border);
-  margin: 0 auto 1.5rem;
 }
-
-.card img {
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.card h2 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: var(--accent);
-  margin: 0 0 0.6rem;
-}
-
-.card p {
-  margin: 0;
+ 
+figcaption {
+  padding: 0.75rem 0.5rem;
+  font-weight: 500;
   color: var(--ink-soft);
-  max-width: 60ch;
 }
-
+ 
 /* ============================================
    Footer
    ============================================ */
@@ -176,32 +178,15 @@ footer {
   font-size: 0.875rem;
   color: var(--ink-soft);
 }
-
+ 
 footer p {
   margin: 0.25rem 0;
 }
-
-/* ============================================
-   Responsive
-   ============================================ */
-@media (max-width: 640px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  nav ul {
-    gap: 0.5rem 1.25rem;
-  }
-}
-
+ 
 /* ============================================
    Reduced motion
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   nav a::after {
     transition: none;
   }
