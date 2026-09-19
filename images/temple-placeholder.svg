@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated placeholder image of a temple with a central spire, steps, and columns">
+  <rect width="400" height="300" fill="#EAF0EC"/>
+  <rect x="0" y="230" width="400" height="70" fill="#DCE6DF"/>
+  <polygon points="200,40 170,90 230,90" fill="#2E5A46"/>
+  <rect x="193" y="18" width="14" height="26" fill="#2E5A46"/>
+  <polygon points="200,18 195,28 205,28" fill="#B98A19"/>
+  <rect x="150" y="90" width="100" height="80" fill="#FFFFFF" stroke="#1F3D30" stroke-width="2"/>
+  <rect x="130" y="170" width="140" height="18" fill="#1F3D30"/>
+  <rect x="110" y="188" width="180" height="16" fill="#2E5A46"/>
+  <rect x="90" y="204" width="220" height="16" fill="#2E5A46" opacity="0.85"/>
+  <rect x="70" y="220" width="260" height="14" fill="#2E5A46" opacity="0.7"/>
+  <rect x="168" y="110" width="14" height="60" fill="#EAF0EC" stroke="#1F3D30" stroke-width="1.5"/>
+  <rect x="193" y="110" width="14" height="60" fill="#EAF0EC" stroke="#1F3D30" stroke-width="1.5"/>
+  <rect x="218" y="110" width="14" height="60" fill="#EAF0EC" stroke="#1F3D30" stroke-width="1.5"/>
+</svg>

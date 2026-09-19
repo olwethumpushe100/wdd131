@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album – Olwethu Mpushe</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals temple photo album by Olwethu Mpushe, a responsive gallery of temple images.">
+  <meta name="author" content="Olwethu Mpushe">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Mobile-first: base styles load first, larger-view overrides load second -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-bar">
+      <span class="site-title">Temple Album</span>
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
+    </div>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <div class="gallery">
+      <figure>
+        <img src="images/salt-lake-temple.jpg" alt="The Salt Lake Temple illuminated at dusk with a colorful pink and blue sunset sky" width="640" height="501" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cape-town-temple.jpg" alt="The Cape Town South Africa Temple with a golden spire against a blue sky" width="206" height="148" loading="lazy">
+        <figcaption>Cape Town South Africa Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/johannesburg-temple.jpg" alt="The Johannesburg South Africa Temple at dusk with its tower lit up" width="640" height="422" loading="lazy">
+        <figcaption>Johannesburg South Africa Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/durban-temple.jpg" alt="The Durban South Africa Temple with its golden angel Moroni statue against a bright sky" width="640" height="480" loading="lazy">
+        <figcaption>Durban South Africa Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/accra-ghana-temple.jpg" alt="The Accra Ghana Temple with palm trees and a gated entrance" width="640" height="320" loading="lazy">
+        <figcaption>Accra Ghana Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/aba-nigeria-temple.jpg" alt="The Aba Nigeria Temple entrance with flowering gardens and a low fence" width="640" height="400" loading="lazy">
+        <figcaption>Aba Nigeria Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/lagos-nigeria-temple.jpg" alt="The Lagos Nigeria Temple with its tall spire under a bright blue sky" width="640" height="507" loading="lazy">
+        <figcaption>Lagos Nigeria Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/kinshasa-temple.jpg" alt="The Kinshasa Democratic Republic of the Congo Temple with a white spire and landscaped grounds" width="461" height="300" loading="lazy">
+        <figcaption>Kinshasa DR Congo Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/harare-temple.jpg" alt="The Harare Zimbabwe Temple lit up at dusk with an orange sunset sky and lamp posts lining the path" width="640" height="360" loading="lazy">
+        <figcaption>Harare Zimbabwe Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Olwethu Mpushe, Eastern Cape, South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
