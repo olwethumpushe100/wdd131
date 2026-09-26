@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iceland | A Place to Visit</title>
+  <meta name="description" content="An overview of Iceland: current weather in Reykjavik, quick facts, and the sights worth planning a trip around.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <p class="wordmark">Ísland</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#weather">Weather</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#sights">Sights</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 700px)" srcset="images/hero-desktop.webp">
+        <img
+          src="images/hero-mobile.webp"
+          srcset="images/hero-mobile.webp 900w, images/hero-desktop.webp 1920w"
+          sizes="100vw"
+          alt="Aurora borealis in green and teal bands over a range of dark Icelandic mountains at night."
+          class="hero-image"
+          width="1920" height="800">
+      </picture>
+      <div class="hero-text wrap">
+        <h1>Iceland</h1>
+        <p>A volcanic island where glaciers meet lava fields, and the night sky moves.</p>
+      </div>
+    </section>
+
+    <section id="weather" class="weather wrap">
+      <h2 class="weather-heading">Weather<img src="images/weather-icon.svg" alt="Partly cloudy" class="weather-icon-mobile" width="40" height="40"></h2>
+      <p class="weather-location">Reykjavík, right now</p>
+      <dl class="weather-grid">
+        <div class="weather-stat">
+          <dt>Temperature</dt>
+          <dd id="temperature">&ndash;2&deg;C</dd>
+        </div>
+        <div class="weather-stat">
+          <dt>Wind speed</dt>
+          <dd id="wind-speed">18 km/h</dd>
+        </div>
+        <div class="weather-stat">
+          <dt>Wind chill</dt>
+          <dd id="wind-chill">Calculating&hellip;</dd>
+        </div>
+      </dl>
+      <p class="weather-note">Figures above are fixed for this assignment. Wind chill is calculated in the browser the moment the page loads.</p>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <h2>An island still being made</h2>
+          <p>Iceland sits on the seam between the North American and Eurasian tectonic plates, so the ground here is, quite literally, still forming. Fresh lava fields sit beside thousand-year-old moss, and a drive across the Ring Road passes waterfalls, black sand beaches, and steam rising straight out of the hillside.</p>
+          <p>Just over 390,000 people live on the island, most of them in and around Reykjavík, which leaves the rest of the country remarkably open: long stretches of road with nothing but sheep, sky, and rock.</p>
+        </div>
+        <dl class="fact-list">
+          <div><dt>Capital</dt><dd>Reykjavík</dd></div>
+          <div><dt>Language</dt><dd>Icelandic</dd></div>
+          <div><dt>Currency</dt><dd>Icelandic króna</dd></div>
+          <div><dt>Best time to see aurora</dt><dd>September &ndash; March</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="sights" class="sights">
+      <div class="wrap">
+        <h2>Worth the detour</h2>
+        <ul class="sight-list">
+          <li class="sight-card">
+            <span class="sight-icon" aria-hidden="true">🌋</span>
+            <h3>The Golden Circle</h3>
+            <p>A loop past Þingvellir National Park, the Geysir hot spring area, and Gullfoss waterfall &mdash; close enough to Reykjavík for a single day out.</p>
+          </li>
+          <li class="sight-card">
+            <span class="sight-icon" aria-hidden="true">🧊</span>
+            <h3>Vatnajökull</h3>
+            <p>Europe's largest glacier by volume, with ice caves that only open in winter and meltwater lagoons full of drifting icebergs.</p>
+          </li>
+          <li class="sight-card">
+            <span class="sight-icon" aria-hidden="true">♨️</span>
+            <h3>Blue Lagoon</h3>
+            <p>A geothermal spa built into a lava field, kept at a steady 37&ndash;39&deg;C year-round regardless of what the weather above is doing.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bar">
+      <p>&copy; <span id="year"></span> Iceland Travel Notes. Built for WDD 131.</p>
+      <p>Last updated <span id="last-modified"></span>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
