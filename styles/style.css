@@ -114,6 +114,7 @@ a:focus-visible, button:focus-visible {
   flex-direction: column;
   justify-content: flex-end;
   padding-block-end: var(--space-l);
+  background: linear-gradient(to top, rgba(4, 10, 20, 0.85) 0%, rgba(4, 10, 20, 0.35) 45%, rgba(4, 10, 20, 0) 75%);
 }
 .hero-text h1 {
   font-size: var(--step-3);
