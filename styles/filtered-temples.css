@@ -1,0 +1,154 @@
+/* ============================================
+   Temple Album - page-specific styles
+   (shared reset, tokens, header/footer text
+   styling, and nav hover live in base.css;
+   this file only adds what this page needs
+   on top of that, scoped under body.temples
+   so nothing here duplicates a base.css rule)
+   ============================================ */
+body.temples {
+  --max-width: 1000px;
+}
+
+/* ============================================
+   Header / hamburger nav (mobile)
+   ============================================ */
+body.temples header {
+  padding: 0;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+body.temples #course-title {
+  margin-bottom: 0;
+}
+
+.page-label {
+  margin: 0 0 0.75rem;
+  padding: 0 1.25rem;
+  text-align: center;
+  color: var(--bg);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.hamburger {
+  background: transparent;
+  border: 2px solid var(--bg);
+  color: var(--bg);
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0.4rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hamburger:hover,
+.hamburger:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+body.temples nav ul {
+  padding: 0 1.25rem 1.1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.85rem;
+  background-color: var(--header-bg);
+}
+
+body.temples nav ul.nav-open {
+  display: flex;
+}
+
+/* ============================================
+   Main / gallery (mobile: single column)
+   ============================================ */
+body.temples main {
+  display: block;
+  padding: 2.25rem 1.25rem 3rem;
+}
+
+body.temples main h1 {
+  font-size: clamp(1.6rem, 1.3rem + 1.5vw, 2.25rem);
+}
+
+.intro-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro-cards .card h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.intro-cards .card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  background-color: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+figcaption {
+  padding: 0.75rem 0.5rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+/* ============================================
+   Temple cards (built by filtered-temples.js)
+   ============================================ */
+.gallery figcaption h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+
+.gallery figcaption p {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.gallery figcaption p:last-child {
+  margin-bottom: 0;
+}
+
+/* Underline stays on for the active filter */
+body.temples nav a[aria-current="true"]::after {
+  transform: scaleX(1);
+}

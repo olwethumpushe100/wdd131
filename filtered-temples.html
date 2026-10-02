@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Filtered Temple Album - Olwethu Mpushe</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals filtered temple album by Olwethu Mpushe, a responsive gallery that filters temples by age and size.">
+  <meta name="author" content="Olwethu Mpushe">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Mobile-first: shared site styles load first, page styles second, larger-view overrides last -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body class="temples">
+
+  <header>
+    <div class="header-bar">
+      <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
+    </div>
+    <p class="page-label">Temple Album</p>
+    <nav>
+      <ul id="primary-nav">
+        <li><a href="#" data-filter="home" aria-current="true">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <div class="intro-cards">
+      <section class="card">
+        <h2>About This Album</h2>
+        <p>
+          This page brings together temples from around the world. Use the
+          menu to filter the album by age or size, or choose Home to see every
+          temple again.
+          <a href="https://www.churchofjesuschrist.org/temples" target="_blank" rel="noopener">See the full list of temples</a>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>How the Filters Work</h2>
+        <p>
+          Old shows temples dedicated before 1900 and New shows those
+          dedicated after 2000. Large shows temples over 90,000 square feet
+          and Small shows temples under 10,000 square feet.
+          <a href="index.html">Learn more about me on my home page</a>.
+        </p>
+      </section>
+    </div>
+
+    <!-- Temple cards are created here by scripts/filtered-temples.js -->
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Olwethu Mpushe, Eastern Cape, South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
