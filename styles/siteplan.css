@@ -1,0 +1,85 @@
+:root {
+  --forest: #1f4d3a;
+  --rust: #b34712;
+  --mist: #f4f7f1;
+  --charcoal: #1c1c1c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--mist);
+  color: var(--charcoal);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h1, h2, nav a {
+  font-family: "Montserrat", sans-serif;
+}
+
+header, footer {
+  background-color: var(--forest);
+  color: var(--mist);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+header h1 { margin: 0; font-size: 1.6rem; }
+.tagline { margin: 0; }
+
+nav { background-color: var(--forest); border-top: 2px solid var(--rust); }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+nav a { color: var(--mist); text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { text-decoration: underline; }
+
+main { max-width: 60rem; margin: 0 auto; padding: 1rem; }
+
+section { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--rust); }
+h2 { color: var(--forest); }
+
+.swatches { list-style: none; padding: 0; }
+.swatches li { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem; }
+.swatch { display: inline-block; width: 2.5rem; height: 2.5rem; border: 2px solid var(--charcoal); }
+.forest { background-color: var(--forest); }
+.rust { background-color: var(--rust); }
+.mist { background-color: var(--mist); }
+.charcoal { background-color: var(--charcoal); }
+
+.font-heading { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 1.4rem; margin: 0; color: var(--forest); }
+.font-body { font-family: "Source Sans 3", sans-serif; font-weight: 600; font-size: 1.4rem; margin: 0; }
+
+.wireframes { display: grid; gap: 1.5rem; }
+figure { margin: 0; }
+figure svg { width: 100%; height: auto; max-width: 28rem; display: block; background: #fff; }
+figcaption { margin-top: 0.5rem; font-style: italic; }
+
+.wf-frame { fill: #fff; stroke: var(--charcoal); stroke-width: 2; }
+.wf-dark { fill: var(--forest); }
+.wf-light { fill: var(--mist); }
+.wf-block { fill: #dfe6da; stroke: var(--forest); stroke-width: 1; }
+svg text { font-family: "Source Sans 3", sans-serif; font-size: 12px; fill: var(--charcoal); }
+svg text.wf-text-light { fill: var(--mist); }
+
+footer { padding: 1rem; text-align: center; }
+footer p { margin: 0; }
+
+a { color: var(--rust); }
+
+@media (min-width: 48rem) {
+  .wireframes { grid-template-columns: 1fr 1.7fr; align-items: start; }
+}

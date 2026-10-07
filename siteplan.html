@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Website planning document for the TrailMate Hiking Club site: name, purpose, scenarios, color scheme, typography and wireframes.">
+  <title>TrailMate Hiking Club | Site Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <svg class="logo" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title">
+      <title id="logo-title">TrailMate Hiking Club logo: a mountain peak with a sun</title>
+      <circle cx="32" cy="32" r="30" fill="#f4f7f1"/>
+      <circle cx="44" cy="20" r="6" fill="#b34712"/>
+      <path d="M8 50 L26 22 L36 38 L42 30 L56 50 Z" fill="#1f4d3a"/>
+    </svg>
+    <div>
+      <h1>TrailMate Hiking Club</h1>
+      <p class="tagline">Website Planning Document</p>
+    </div>
+  </header>
+
+  <nav aria-label="Plan sections">
+    <ul>
+      <li><a href="#name">Site Name</a></li>
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="name">
+      <h2>Site Name</h2>
+      <p><strong>TrailMate Hiking Club</strong></p>
+      <p>The name is short and memorable. "Trail" tells visitors the site is about hiking, and "Mate" signals a friendly community where members find hiking partners.</p>
+      <p>Optional domain availability: trailmate-hiking.org</p>
+    </section>
+
+    <section id="purpose">
+      <h2>Site Purpose</h2>
+      <p>The site is a hub for local hikers. It provides:</p>
+      <ul>
+        <li>Trail recommendations with difficulty, distance and photos.</li>
+        <li>Gear advice for beginners and experienced hikers.</li>
+        <li>An events calendar of group hikes.</li>
+        <li>A membership information form for new members.</li>
+      </ul>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <p>Questions a visitor from the target audience might ask:</p>
+      <ol>
+        <li>What is a good beginner trail I can finish in half a day?</li>
+        <li>What gear do I need for a day hike in cold weather?</li>
+        <li>When is the next group hike, and how do I sign up?</li>
+      </ol>
+    </section>
+
+    <section id="colors">
+      <h2>Color Schema</h2>
+      <p>These colors are used on this document and will be used on the final site.</p>
+      <ul class="swatches">
+        <li><span class="swatch forest"></span><strong>Forest Green #1f4d3a</strong> Header and footer backgrounds, headings, and navigation.</li>
+        <li><span class="swatch rust"></span><strong>Trail Rust #b34712</strong> Links, buttons, borders and other accents.</li>
+        <li><span class="swatch mist"></span><strong>Mist #f4f7f1</strong> Page background and text on dark backgrounds.</li>
+        <li><span class="swatch charcoal"></span><strong>Charcoal #1c1c1c</strong> Paragraph and body text.</li>
+      </ul>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <ul>
+        <li><p class="font-heading">Montserrat (600 and 700)</p> Used for the site name, headings and navigation links.</li>
+        <li><p class="font-body">Source Sans 3 (400 and 600)</p> Used for paragraphs, lists, forms and captions.</li>
+      </ul>
+      <p>Both fonts come from Google Fonts. Fallbacks are <code>sans-serif</code>.</p>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <p>Home page layout. Both versions show the header with navigation, a hero area, featured trails, upcoming events and a footer.</p>
+      <div class="wireframes">
+        <figure>
+          <svg viewBox="0 0 200 340" role="img" aria-labelledby="mobile-title">
+            <title id="mobile-title">Mobile wireframe</title>
+            <rect class="wf-frame" x="1" y="1" width="198" height="338"/>
+            <rect class="wf-dark" x="1" y="1" width="198" height="40"/>
+            <rect class="wf-light" x="10" y="12" width="60" height="16"/>
+            <rect class="wf-light" x="165" y="12" width="24" height="16"/>
+            <rect class="wf-block" x="10" y="52" width="180" height="70"/>
+            <text x="100" y="92" text-anchor="middle">Hero image</text>
+            <rect class="wf-block" x="10" y="132" width="180" height="50"/>
+            <text x="100" y="161" text-anchor="middle">Trail card</text>
+            <rect class="wf-block" x="10" y="190" width="180" height="50"/>
+            <text x="100" y="219" text-anchor="middle">Trail card</text>
+            <rect class="wf-block" x="10" y="248" width="180" height="40"/>
+            <text x="100" y="272" text-anchor="middle">Upcoming events</text>
+            <rect class="wf-dark" x="1" y="300" width="198" height="39"/>
+            <text class="wf-text-light" x="100" y="324" text-anchor="middle">Footer</text>
+          </svg>
+          <figcaption>Mobile view: one column with a menu button.</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 480 320" role="img" aria-labelledby="desktop-title">
+            <title id="desktop-title">Desktop wireframe</title>
+            <rect class="wf-frame" x="1" y="1" width="478" height="318"/>
+            <rect class="wf-dark" x="1" y="1" width="478" height="40"/>
+            <rect class="wf-light" x="12" y="12" width="70" height="16"/>
+            <rect class="wf-light" x="260" y="14" width="40" height="12"/>
+            <rect class="wf-light" x="310" y="14" width="40" height="12"/>
+            <rect class="wf-light" x="360" y="14" width="40" height="12"/>
+            <rect class="wf-light" x="410" y="14" width="56" height="12"/>
+            <rect class="wf-block" x="12" y="52" width="456" height="90"/>
+            <text x="240" y="102" text-anchor="middle">Hero image</text>
+            <rect class="wf-block" x="12" y="152" width="144" height="80"/>
+            <text x="84" y="196" text-anchor="middle">Trail card</text>
+            <rect class="wf-block" x="168" y="152" width="144" height="80"/>
+            <text x="240" y="196" text-anchor="middle">Trail card</text>
+            <rect class="wf-block" x="324" y="152" width="144" height="80"/>
+            <text x="396" y="196" text-anchor="middle">Trail card</text>
+            <rect class="wf-block" x="12" y="242" width="456" height="30"/>
+            <text x="240" y="262" text-anchor="middle">Upcoming events</text>
+            <rect class="wf-dark" x="1" y="282" width="478" height="37"/>
+            <text class="wf-text-light" x="240" y="305" text-anchor="middle">Footer</text>
+          </svg>
+          <figcaption>Desktop view: full navigation bar and three trail cards in a row.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TrailMate Hiking Club | WDD 131 Site Plan</p>
+  </footer>
+</body>
+</html>
