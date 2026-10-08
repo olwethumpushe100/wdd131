@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Share your experience with a product by submitting a short review form with a rating, installation date and useful features.">
+  <meta name="author" content="Olwethu Mpushe">
+  <title>Product Review Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+
+  <main>
+    <p class="note"><span class="required" aria-hidden="true">*</span> indicates a required field</p>
+
+    <form action="review.html" method="get">
+      <div class="field">
+        <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>Overall Rating <span class="required" aria-hidden="true">*</span></legend>
+        <div class="rating">
+          <input type="radio" id="rating-1" name="rating" value="1" required>
+          <label for="rating-1">1<span class="sr-only"> star</span></label>
+          <input type="radio" id="rating-2" name="rating" value="2">
+          <label for="rating-2">2<span class="sr-only"> stars</span></label>
+          <input type="radio" id="rating-3" name="rating" value="3">
+          <label for="rating-3">3<span class="sr-only"> stars</span></label>
+          <input type="radio" id="rating-4" name="rating" value="4">
+          <label for="rating-4">4<span class="sr-only"> stars</span></label>
+          <input type="radio" id="rating-5" name="rating" value="5">
+          <label for="rating-5">5<span class="sr-only"> stars</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="install-date">Date of Installation <span class="required" aria-hidden="true">*</span></label>
+        <input type="date" id="install-date" name="install-date" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Useful Features</legend>
+        <div class="checks">
+          <div>
+            <input type="checkbox" id="feature-install" name="features" value="easy-install">
+            <label for="feature-install">Easy to install</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature-durable" name="features" value="durable">
+            <label for="feature-durable">Durable</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature-performance" name="features" value="performance">
+            <label for="feature-performance">Great performance</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature-value" name="features" value="value">
+            <label for="feature-value">Good value</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature-design" name="features" value="design">
+            <label for="feature-design">Stylish design</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review" rows="5"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="username">Your Name</label>
+        <input type="text" id="username" name="username" autocomplete="name">
+      </div>
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Olwethu Mpushe | Dynamic Web Fundamentals</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
