@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Browse TrailMate trail recommendations with difficulty, distance and time. Filter by level and save your favorite hikes.">
+  <meta name="author" content="Olwethu Mpushe">
+  <title>Trails | TrailMate Hiking Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/trail-data.js" defer></script>
+  <script src="scripts/trails.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>TrailMate Hiking Club</span>
+    </a>
+    <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html" aria-current="page">Trails</a></li>
+        <li><a href="gear.html">Gear</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Trail Recommendations</h1>
+    <p>Choose a difficulty level to see trails that match your experience. Distances and times are approximate and depend on your pace and the weather.</p>
+
+    <div class="toolbar">
+      <label for="level-filter">Difficulty</label>
+      <select id="level-filter" name="level-filter">
+        <option value="all">All trails</option>
+        <option value="easy">Easy</option>
+        <option value="moderate">Moderate</option>
+        <option value="hard">Hard</option>
+      </select>
+      <p id="result-count" aria-live="polite"></p>
+    </div>
+
+    <div class="card-grid" id="trail-list"></div>
+
+    <section>
+      <h2>Your saved trails</h2>
+      <p id="favorites-summary"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> TrailMate Hiking Club | Olwethu Mpushe</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

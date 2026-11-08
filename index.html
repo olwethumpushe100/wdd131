@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Dynamic Web Fundamentals – Olwethu Mpushe</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course landing page for Olwethu Mpushe, featuring web development, HTML, CSS, and JavaScript coursework.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="TrailMate is a friendly hiking club. Find trails by difficulty, learn what to pack and join a group hike every Saturday.">
   <meta name="author" content="Olwethu Mpushe">
+  <title>TrailMate Hiking Club | Home</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/getdates.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/trail-data.js" defer></script>
+  <script src="scripts/home.js" defer></script>
 </head>
 <body>
-
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-    <nav>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/olwethu-mpushe-3b03a2414" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Favorite Scripture</a></li>
-        <li><a href="https://github.com/olwethumpushe100/wdd131" target="_blank" rel="noopener">Final Project</a></li>
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>TrailMate Hiking Club</span>
+    </a>
+    <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="gear.html">Gear</a></li>
+        <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <img src="images/profile.jpg" alt="Portrait of Olwethu Mpushe standing in front of a flowering pink blossom hedge" width="480" height="518" class="profile-photo">
-    <h1>Olwethu Mpushe</h1>
-
-    <section class="card">
-      <img src="images/card-goals.svg" alt="Concentric rings around a small marker, representing a learning goal" width="240" height="160" loading="lazy">
-      <h2>Why I'm here</h2>
-      <p>
-        I started WDD 131 to build a real, working foundation in HTML, CSS, and
-        JavaScript — not just enough to copy a tutorial, but enough to build a
-        page from a blank file and understand every line of it. This course is
-        my first step toward a web development certificate, and this page is
-        the first thing I've built entirely on my own.
-      </p>
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h1>Hike more, together.</h1>
+        <p id="welcome" class="welcome" hidden></p>
+        <p>TrailMate is a friendly hiking club for beginners and experienced walkers. Find a trail that suits you, learn what to pack, and join a group hike this Saturday.</p>
+        <p>
+          <a class="button" href="trails.html">Find a trail</a>
+          <a class="button" href="join.html">Join the club</a>
+        </p>
+      </div>
+      <img src="images/hero-hikers.webp" alt="A group of hikers walking a rocky trail toward snow-capped mountains and low clouds" width="1600" height="1066" fetchpriority="high">
     </section>
 
-    <section class="card">
-      <img src="images/card-project.svg" alt="A simplified browser window with three panels, representing a website in progress" width="240" height="160" loading="lazy">
-      <h2>What I'm building</h2>
-      <p>
-        Over the semester I'll turn this page into a small portfolio site,
-        adding a project gallery, a contact form, and a few interactive
-        features with vanilla JavaScript. My goal for the final project is a
-        clean, fast, accessible site that loads in well under a second on a
-        typical connection.
-      </p>
+    <section>
+      <h2>Featured trails</h2>
+      <p>Three popular routes, from a gentle walk to a steady climb.</p>
+      <div class="card-grid" id="featured-trails"></div>
+      <p><a href="trails.html">See all trails and filter by difficulty</a></p>
+    </section>
+
+    <section>
+      <h2>Upcoming group hikes</h2>
+      <p>We hike every Saturday. Each hike meets at the trailhead at the time shown.</p>
+      <ul class="event-list" id="event-list"></ul>
+      <p>To sign up for a hike, <a href="join.html">join the club</a>.</p>
+    </section>
+
+    <section class="split">
+      <img src="images/hiking-group.webp" alt="Four smiling hikers with backpacks standing together on a rocky lookout above a forest and lakes" width="640" height="828" loading="lazy">
+      <div>
+        <h2>Why hike with TrailMate</h2>
+        <div class="panel-grid">
+        <article class="panel">
+          <h3>Safer in a group</h3>
+          <p>Mountain weather changes quickly. Hiking with others means help is always close by.</p>
+        </article>
+        <article class="panel">
+          <h3>Local knowledge</h3>
+          <p>Our hike leaders know the trails, the best times to start and where the views are.</p>
+        </article>
+        <article class="panel">
+          <h3>A friendly pace</h3>
+          <p>Every hike has a level, so you can choose one that matches your fitness and experience.</p>
+        </article>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Olwethu Mpushe, Eastern Cape, South Africa</p>
-    <p id="lastModified"></p>
+    <p>&copy; <span id="year"></span> TrailMate Hiking Club | Olwethu Mpushe</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
   </footer>
-
 </body>
 </html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Admin login | TrailMate{% endblock %}
+{% block content %}
+<h1>Admin login</h1>
+{% if failed %}
+<p class="alert" role="alert">That password was not correct.</p>
+{% endif %}
+<form action="/admin/login" method="post">
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" autocomplete="current-password" required>
+  </div>
+  <input type="submit" value="Log in">
+</form>
+{% endblock %}

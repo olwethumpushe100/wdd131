@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Members | TrailMate Admin{% endblock %}
+{% block header_actions %}
+<form class="logout" action="/admin/logout" method="post">
+  <input class="small-button" type="submit" value="Log out">
+</form>
+{% endblock %}
+{% block content %}
+<h1>Members</h1>
+
+<div class="stats">
+  <p><strong>{{ total }}</strong> total</p>
+  <p><strong>{{ counts.beginner }}</strong> beginner</p>
+  <p><strong>{{ counts.intermediate }}</strong> intermediate</p>
+  <p><strong>{{ counts.advanced }}</strong> advanced</p>
+</div>
+
+<p><a class="button" href="/admin/export.csv">Download CSV</a></p>
+
+{% if members %}
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Joined (UTC)</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Experience</th>
+        <th scope="col">Day</th>
+        <th scope="col">Interests</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for member in members %}
+      <tr>
+        <td>{{ member.created_at }}</td>
+        <td>{{ member.full_name }}</td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.level }}</td>
+        <td>{{ member.preferred_day }}</td>
+        <td>{{ member.interests }}</td>
+        <td>{{ member.comments }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p>No one has joined yet.</p>
+{% endif %}
+{% endblock %}

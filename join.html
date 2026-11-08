@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Join TrailMate Hiking Club. Tell us your hiking experience and the days you prefer, and we will send trail and event updates.">
+  <meta name="author" content="Olwethu Mpushe">
+  <title>Join the Club | TrailMate Hiking Club</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/common.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="48" height="48">
+      <span>TrailMate Hiking Club</span>
+    </a>
+    <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="gear.html">Gear</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Join the Club</h1>
+    <p>Tell us a little about yourself and we will keep you updated about group hikes that suit your experience.</p>
+    <p class="note"><span class="required" aria-hidden="true">*</span> indicates a required field</p>
+    <p class="note">This is a demonstration form. Your details are shown on the next page and your name is saved in this browser only. Nothing is sent to a server.</p>
+
+    <form action="thanks.html" method="get">
+      <div class="field">
+        <label for="fullname">Full Name <span class="required" aria-hidden="true">*</span></label>
+        <input type="text" id="fullname" name="fullname" autocomplete="name" maxlength="80" pattern="[^<>]+" title="Please do not use the &lt; or &gt; characters." required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Hiking Experience <span class="required" aria-hidden="true">*</span></legend>
+        <div class="choices">
+          <div>
+            <input type="radio" id="level-beginner" name="level" value="beginner" required>
+            <label for="level-beginner">Beginner</label>
+          </div>
+          <div>
+            <input type="radio" id="level-intermediate" name="level" value="intermediate" required>
+            <label for="level-intermediate">Intermediate</label>
+          </div>
+          <div>
+            <input type="radio" id="level-advanced" name="level" value="advanced" required>
+            <label for="level-advanced">Advanced</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="day">Preferred Hiking Day <span class="required" aria-hidden="true">*</span></label>
+        <select id="day" name="day" required>
+          <option value="" disabled selected>Select a day ...</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+          <option value="Weekdays">Weekdays</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>Interests</legend>
+        <div class="choices">
+          <div>
+            <input type="checkbox" id="interest-day" name="interests" value="Day hikes">
+            <label for="interest-day">Day hikes</label>
+          </div>
+          <div>
+            <input type="checkbox" id="interest-run" name="interests" value="Trail running">
+            <label for="interest-run">Trail running</label>
+          </div>
+          <div>
+            <input type="checkbox" id="interest-photo" name="interests" value="Photography">
+            <label for="interest-photo">Photography</label>
+          </div>
+          <div>
+            <input type="checkbox" id="interest-care" name="interests" value="Trail conservation">
+            <label for="interest-care">Trail conservation</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="comments">Anything else we should know?</label>
+        <textarea id="comments" name="comments" rows="4" maxlength="500"></textarea>
+      </div>
+
+      <input type="submit" value="Join TrailMate">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> TrailMate Hiking Club | Olwethu Mpushe</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>
